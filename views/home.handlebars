@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+    <header id="header"></header>
+    <div class="container">
+        <div class="topnav">
+            <h2>Búsqueda de noticias:</h2>
+            <input type="text" placeholder="Noticias.." id="barra">
+            <button type="button" id="boton">Buscar:</button>
+        </div>
+        <div class="grid clearfix" id="grid">
+        {{#each noticias}}
+            <div class="col-3 tb-col-6 mb-col-8 ALIN">
+                <img src="{{urlToImage}}" />
+                <h2>{{title}}</h2>
+                <p>{{description}}</p>
+                <a href="{{url}}" target="_blank">Ver más</a>
+            </div>
+        {{/each}}
+        </div>
+        
+    </div>
+        <footer>&copy; ITESO</footer>
+    </div>
+</body>
+</html>
